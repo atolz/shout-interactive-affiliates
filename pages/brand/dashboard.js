@@ -58,7 +58,7 @@ const Dashboard = () => {
             setActiveTable(item);
           }}
           items={["Coupon History", "Product", "Branches", "Team"]}
-          className="mb-[1rem]"
+          className="!mb-[1rem]"
         ></ManagerSwitcher>
         {activeTable == "Coupon History" && <CouponsTable></CouponsTable>}
         {activeTable == "Product" && <ProductTable></ProductTable>}
