@@ -1,7 +1,7 @@
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 
-const BtnOutlinedWithIcon = ({ text, icon, color }) => {
+const BtnOutlinedWithIcon = ({ text, icon, color, className }) => {
   return (
     <Tooltip
       title={text}
@@ -12,7 +12,10 @@ const BtnOutlinedWithIcon = ({ text, icon, color }) => {
         },
       }}
     >
-      <button className={`px-[10px] h-[32px] whitespace-nowrap ${color ? "border-success-default" : "border-gray-dark"}   rounded-xl border  flex items-center justify-center`}>
+      <button
+        style={{ borderColor: color }}
+        className={`px-[10px] bg-white h-[32px] whitespace-nowrap ${color ? "border-success-default" : "border-gray-dark"}   rounded-xl border-[1.9px]  flex items-center justify-center ${className}`}
+      >
         <span>{icon}</span>
         <span className="caption_heavy ml-[8px] text-gray-darker">{text}</span>
       </button>

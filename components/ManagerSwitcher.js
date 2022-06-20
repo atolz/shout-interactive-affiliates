@@ -1,27 +1,31 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const ManagerSwitcher = ({ className }) => {
-  const managerTypes = ["Affiliates", "Brand Managers", "Party Managers", "Analytics Manager", "Celebrities", "Media Managers"];
-  const [activeManager, setActiveManager] = useState("Affiliates");
+const ManagerSwitcher = ({ className, items = ["Affiliates", "Brand Managers", "Party Managers", "Analytics Manager", "Celebrities", "Media Managers"], handleChange = () => {} }) => {
+  const [activeManager, setActiveManager] = useState();
 
   const handleSwitch = (type) => {
     setActiveManager(type);
+    handleChange(type);
   };
 
+  useEffect(() => {
+    handleSwitch(items[0]);
+  }, []);
+
   return (
-    <nav className={`Switcher flex mb-[48px] overflow-x-scroll scroll_hide ${className}`}>
-      {managerTypes.map((type, i) => {
+    <nav className={` flex mb-[48px] overflow-x-scroll scroll_hide ${className}`}>
+      {items.map((item, i) => {
         return (
           <p
             onClick={() => {
-              handleSwitch(type);
+              handleSwitch(item);
             }}
             key={i}
             className={` whitespace-nowrap px-[16px] py-[6px] transition-all  rounded-[8px] body_heavy  ${
-              activeManager == type ? "text-black-default bg-primary-lightest-2" : "text-black-light"
+              activeManager == item ? "text-black-default bg-primary-lightest-2" : "text-black-light"
             } cursor-pointer `}
           >
-            {type}
+            {item}
           </p>
         );
       })}

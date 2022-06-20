@@ -34,7 +34,7 @@ const BaseLayout = (props) => {
   ];
   return (
     <div className={styles.container + " scroll_hide"}>
-      <nav className={styles.sidebar + ` border-r border-b border-gray-light p-[16px] md:pr-[44px] ${showNav ? "block" : "hidden md:block"}`}>
+      {/* <nav className={styles.sidebar + ` border-r border-b border-gray-light p-[16px] md:pr-[44px] ${showNav ? "block" : "hidden md:block"}`}>
         <img className="w-[100px] h-[32px] mb-[40px] ml-[40px] hidden md:block" src="/Shout Logo.svg" />
 
         <ul className={styles.nav}>
@@ -59,7 +59,7 @@ const BaseLayout = (props) => {
             );
           })}
         </ul>
-      </nav>
+      </nav> */}
       <section className={`${styles.section}`}>
         <Header toggleNav={handleToggleNav} isCrossed={isCrossed} />
         <main className="mt-[56px] md:mt-0 h-screen scroll_hide overflow-scroll">{props.children}</main>
