@@ -3,7 +3,7 @@ import BtnOutlined from "./Buttons/BtnOutlined";
 
 const ModalContainer = ({ children, icon, headerText, onClose, actionText, onAction }) => {
   return (
-    <div className="px-[24px] py-[32px] rounded-[8px] md:w-[423px]">
+    <div className="px-[24px] py-[32px] rounded-[8px] md:min-w-[423px]">
       {/* modal header */}
       <div className="flex items-center mb-[60px]">
         <span className="rou rounded-full w-[28px] h-[28px] bg-primary-lightest-2 flex justify-center items-center">{icon}</span>

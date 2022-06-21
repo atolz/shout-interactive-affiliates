@@ -22,7 +22,7 @@ const ManagerSwitcher = ({ className, items = ["Affiliates", "Brand Managers", "
             }}
             key={i}
             className={` whitespace-nowrap px-[16px] py-[6px] transition-all  rounded-[8px] body_heavy  ${
-              activeManager == item ? "text-black-default bg-primary-lightest-2" : "text-black-light"
+              activeManager == item ? "text-black-default border-b-black-default" : "text-black-light"
             } cursor-pointer `}
           >
             {item}
@@ -34,3 +34,5 @@ const ManagerSwitcher = ({ className, items = ["Affiliates", "Brand Managers", "
 };
 
 export default ManagerSwitcher;
+
+ // activeManager == item ? "text-black-default bg-primary-lightest-2" : "text-black-light"

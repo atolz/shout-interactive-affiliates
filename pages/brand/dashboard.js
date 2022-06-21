@@ -7,14 +7,13 @@ import TextField from "../../components/FormElements/TextField";
 import ModalContainer from "../../components/ModalContainer";
 import Calender from "../../components/FormElements/Calender";
 import MySelect from "../../components/FormElements/Select";
-import BrandsTable from "../../components/Tables/BrandManagement/BrandsTable";
 import ManagerSwitcher from "../../components/ManagerSwitcher";
-import LabelTag from "../../components/LabelTag";
 import StatCard from "../../components/Cards/StatCard";
 import BrandDetails from "../../components/Pages/Dashboard/BrandDetails";
 import CouponsTable from "../../components/Tables/CouponsTable";
 import ProductTable from "../../components/Tables/ProductTable";
 import BranchesTable from "../../components/Tables/BranchesTable";
+import TeamTable from "../../components/Tables/TeamTable";
 
 const Dashboard = () => {
   const [open, setOpen] = useState(false);
@@ -63,7 +62,7 @@ const Dashboard = () => {
         {activeTable == "Coupon History" && <CouponsTable></CouponsTable>}
         {activeTable == "Product" && <ProductTable></ProductTable>}
         {activeTable == "Branches" && <BranchesTable></BranchesTable>}
-        {activeTable == "Team" && <BranchesTable></BranchesTable>}
+        {activeTable == "Team" && <TeamTable></TeamTable>}
       </div>
     </Padding>
   );
