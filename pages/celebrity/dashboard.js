@@ -56,7 +56,7 @@ const Dashboard = () => {
       </div>
       <BtnOutlinedWithIcon className="mr-[8px]" color="green" text="Copy Link" icon={<span className="icon-copy text-success-default text-[20px]"> </span>}></BtnOutlinedWithIcon>
       <BtnOutlinedWithIcon className="mr-auto" color="#110066" text="Share Link" icon={<span className="icon-copy text-black-default text-[20px]"> </span>}></BtnOutlinedWithIcon>
-      <EditBtn text='Edit Celebrity' link='/media/edit' icon={<span className="icon-plus-circle"></span> } />
+      <EditBtn text='Edit Celebrity' link='/celebrity/edit' icon={<span className="icon-plus-circle"></span> } />
       
     </header>
         <CelebrityDetails></CelebrityDetails>
