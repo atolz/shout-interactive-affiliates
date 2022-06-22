@@ -25,7 +25,7 @@ const StatCard = ({ value, text, color, type }) => {
           )}
         </p>
       </div>
-      <span className={`icon-flower1 text-[40px] right-[24px] absolute self-center ${color == "yellow" ? "text-warn-default" : "text-success-default"} `}></span>
+      {/* <span className={`icon-flower1 text-[40px] right-[24px] absolute self-center ${color == "yellow" ? "text-warn-default" : "text-success-default"} `}></span> */}
     </div>
   );
 };

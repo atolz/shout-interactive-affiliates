@@ -50,7 +50,7 @@ const Dashboard = () => {
       </Dialog>
       <div className="max-w-[1100px] mx-auto">
         
-        <DisplayHeader displayText={"David Adeleke"} action={toggle} subheaderText={""} Button={{ text: "Create Edible Shout Link", link: "/brand/dashboard" }} />
+        {/* <DisplayHeader displayText={"David Adeleke"} action={toggle} subheaderText={""} Button={{ text: "Create Edible Shout Link", link: "/brand/dashboard" }} /> */}
         <header className="flex flex-wrap justify-between mb-[27px] md:mb-[52px] items-center w-full">
       <div className="mr-5">
         <h2 className="display_3_heavy ">David Adeleke</h2>
@@ -60,7 +60,7 @@ const Dashboard = () => {
       <BtnOutlinedWithIcon className="mr-auto" color="#110066" text="Share Link" icon={<span className="icon-copy text-black-default text-[20px]"> </span>}></BtnOutlinedWithIcon>
         <div
           className="ml-auto"
-          onClick={toggle}
+          onClick={'/celebrity/edit'}
         >
           <BtnOutlinedWithIcon text='Edit Celebrity' color='#110066' textcolor='black' icon={<span className="icon-plus-circle"> </span>} /> 
           {/* <BtnIcon text={Button.text} link={Button.link} icon={<span className="icon-plus-circle"> </span>}></BtnIcon> */}
