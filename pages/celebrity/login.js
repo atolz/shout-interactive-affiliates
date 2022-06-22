@@ -21,7 +21,7 @@ const Login = () => {
                 </div>
                 <p className="text-light-blue my-[20px] md:mb-0">Change Password</p>
                 <div className='w-[90%]'>
-                    <BtnPrimary text='Log In' />
+                    <BtnPrimary text='Log In' link='/celebrity/dashboard' />
                 </div>
             </Stack>
         </div>

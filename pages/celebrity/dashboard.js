@@ -13,7 +13,6 @@ import TeamTable from "../../components/Tables/celebrity/TeamTable";
 import CelebrityDetails from "../../components/Pages/Dashboard/CelebrityDetails";
 import PartyTable from "../../components/Tables/celebrity/PartyTable";
 import BtnOutlinedWithIcon from "../../components/Buttons/BtnOutlinedWithIcon";
-import EditBtn from "../../components/Buttons/EditBtn";
 import Filter from "../../components/Filter";
 
 const Dashboard = () => {
@@ -47,15 +46,22 @@ const Dashboard = () => {
         </ModalContainer>
       </Dialog>
       <div className="max-w-[1100px] mx-auto">
-      <header className="flex flex-wrap justify-between mb-[27px] md:mb-[52px] items-center w-full">
+        
+        {/* <DisplayHeader displayText={"David Adeleke"} action={toggle} subheaderText={""} Button={{ text: "Create Edible Shout Link", link: "/brand/dashboard" }} /> */}
+        <header className="flex flex-wrap justify-between mb-[27px] md:mb-[52px] items-center w-full">
       <div className="mr-5">
         <h2 className="display_3_heavy ">David Adeleke</h2>
         <p className="subheader_light mb-[30px] md:mb-0"></p>
       </div>
       <BtnOutlinedWithIcon className="mr-[8px]" color="green" text="Copy Link" icon={<span className="icon-copy text-success-default text-[20px]"> </span>}></BtnOutlinedWithIcon>
       <BtnOutlinedWithIcon className="mr-auto" color="#110066" text="Share Link" icon={<span className="icon-copy text-black-default text-[20px]"> </span>}></BtnOutlinedWithIcon>
-      <EditBtn text='Edit Celebrity' link='/celebrity/edit' icon={<span className="icon-plus-circle"></span> } />
-      
+        <div
+          className="ml-auto"
+          onClick={'/celebrity/edit'}
+        >
+          <BtnOutlinedWithIcon text='Edit Celebrity' color='#110066' textcolor='black' icon={<span className="icon-plus-circle"> </span>} /> 
+          {/* <BtnIcon text={Button.text} link={Button.link} icon={<span className="icon-plus-circle"> </span>}></BtnIcon> */}
+        </div>
     </header>
         <CelebrityDetails></CelebrityDetails>
         <div className="flex flex-row justify-between mb-[1.2rem]">
