@@ -35,6 +35,9 @@ module.exports = {
 
         //error
         "error-default": "#F03738",
+
+        //light blue
+        'light-blue': 'rgba(0, 127, 197, 1)'
       },
     },
     screens: {

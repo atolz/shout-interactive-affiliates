@@ -2,6 +2,7 @@ import React from 'react';
 import { Stack } from '@mui/material';
 import TextField from "../../components/FormElements/TextField";
 import LoginLayout from '../../components/Layouts/LoginLayout';
+import BtnPrimary from '../../components/Buttons/BtnPrimary';
 
 const Login = () => {
   return (
@@ -13,13 +14,14 @@ const Login = () => {
             </div>
             <Stack gap={"24px"}>
                 <div className='flex flex-row justify-between'>
-                    <div className='w-full'><TextField label="Twitter"></TextField></div>
+                    <div className='w-full'><TextField label="Username"></TextField></div>
                 </div>
                 <div className='flex flex-row justify-between'>
-                    <div className='w-full'><TextField label="Snapchat"></TextField></div>
+                    <div className='w-full'><TextField label="Password"></TextField></div>
                 </div>
-                <div className='flex flex-row justify-between'>
-                    <div className='w-full'><TextField label="YouTube"></TextField></div>
+                <p className="text-light-blue my-[20px] md:mb-0">Change Password</p>
+                <div className='w-[90%]'>
+                    <BtnPrimary text='Log In' />
                 </div>
             </Stack>
         </div>
