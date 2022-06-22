@@ -13,16 +13,22 @@ import BrandDetails from "../../components/Pages/Dashboard/BrandDetails";
 import CouponsTable from "../../components/Tables/CouponsTable";
 import ProductTable from "../../components/Tables/ProductTable";
 import BranchesTable from "../../components/Tables/BranchesTable";
-import TeamTable from "../../components/Tables/TeamTable";
+import TeamTable from "../../components/Tables/celebrity/TeamTable";
 import CelebrityDetails from "../../components/Pages/Dashboard/CelebrityDetails";
+import PartyTable from "../../components/Tables/celebrity/PartyTable";
+import BtnOutlinedWithIcon from "../../components/Buttons/BtnOutlinedWithIcon";
 
 const Dashboard = () => {
   const [open, setOpen] = useState(false);
-  const [activeTable, setActiveTable] = useState("Coupon History");
+  const [activeTable, setActiveTable] = useState("Team");
   const stats = [
-    { title: "Coupon Acquired", type: "number", value: "30/1200" },
-    { title: "Used Coupon ", type: "number", value: "41" },
-    { title: "Total no of sales", type: "money", value: "97" },
+    { title: "Total Clicks", type: "number", value: "300" },
+    { title: "Total View", type: "number", value: "314" },
+    { title: "Total Converted", type: "money", value: "100" },
+    { title: "Amount Earned", type: "money", value: "2, 000" },
+    { title: "Amount Paid", type: "money", value: "70, 000" },
+    { title: "Total Number of Sign Up", type: "money", value: "20" },
+    { title: "Total Number of Visits", type: "money", value: "217" },
   ];
   function toggle() {
     console.log("toggleing...");
@@ -43,12 +49,30 @@ const Dashboard = () => {
         </ModalContainer>
       </Dialog>
       <div className="max-w-[1100px] mx-auto">
+        
         <DisplayHeader displayText={"David Adeleke"} action={toggle} subheaderText={""} Button={{ text: "Create Edible Shout Link", link: "/brand/dashboard" }} />
-        {/* <DisplayHeader displayText={"Welcome"} action={toggle} subheaderText={""} /> */}
-        {/* Dashboard */}
+        <header className="flex flex-wrap justify-between mb-[27px] md:mb-[52px] items-center w-full">
+      <div className="mr-5">
+        <h2 className="display_3_heavy ">David Adeleke</h2>
+        <p className="subheader_light mb-[30px] md:mb-0"></p>
+      </div>
+      <BtnOutlinedWithIcon className="mr-[8px]" color="green" text="Copy Link" icon={<span className="icon-copy text-success-default text-[20px]"> </span>}></BtnOutlinedWithIcon>
+      <BtnOutlinedWithIcon className="mr-auto" color="#110066" text="Share Link" icon={<span className="icon-copy text-black-default text-[20px]"> </span>}></BtnOutlinedWithIcon>
+        <div
+          className="ml-auto"
+          onClick={toggle}
+        >
+          <BtnOutlinedWithIcon text='Edit Celebrity' color='#110066' textcolor='black' icon={<span className="icon-plus-circle"> </span>} /> 
+          {/* <BtnIcon text={Button.text} link={Button.link} icon={<span className="icon-plus-circle"> </span>}></BtnIcon> */}
+        </div>
+    </header>
         <CelebrityDetails></CelebrityDetails>
+        <div className="flex flex-row justify-between">
         <p className="subheader_heavy mb-[1.2rem]">Analytics</p>
-        <div className="flex gap-[24px] overflow-x-scroll styled-scroll-bar scroll_hide mb-[1.6rem] md:mb-[4.4rem] border-dashed border-b md:border-none pb-7 md:pb-2">
+        <p className="subheader_heavy mb-[1.2rem]">Filter</p>
+        </div>
+
+        <div className="flex flex-wrap gap-[24px] mb-[1.6rem] md:mb-[4.4rem] border-dashed border-b md:border-none pb-7 md:pb-2">
           {stats.map((stat, i) => {
             return <StatCard key={i} type={stat.type} text={stat.title} value={stat.value}></StatCard>;
           })}
@@ -57,12 +81,10 @@ const Dashboard = () => {
           handleChange={(item) => {
             setActiveTable(item);
           }}
-          items={["Coupon History", "Product", "Branches", "Team"]}
+          items={["Parties", "Team"]}
           className="!mb-[1rem]"
         ></ManagerSwitcher>
-        {activeTable == "Coupon History" && <CouponsTable></CouponsTable>}
-        {activeTable == "Product" && <ProductTable></ProductTable>}
-        {activeTable == "Branches" && <BranchesTable></BranchesTable>}
+        {activeTable == "Parties" && <PartyTable></PartyTable>}
         {activeTable == "Team" && <TeamTable></TeamTable>}
       </div>
     </Padding>

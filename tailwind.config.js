@@ -15,7 +15,7 @@ module.exports = {
         "black-lighter": "#C1C7D1",
         "black-lightest-2": "#E5E9EC",
         "black-lightest-1": "#F3F4F6",
-
+        'navy': '#110066',
         "hover-color--1": "#F9FAFA",
 
         //Gray color scheme
