@@ -1,7 +1,6 @@
 import { Dialog, Stack } from "@mui/material";
 import React, { useState } from "react";
-// import Link from "next/link";
-import Link from "next/dist/client/link";
+import Link from "next/link";
 import BaseLayout from "../../components/Layouts/BaseLayout";
 import DisplayHeader from "../../components/Layouts/DisplayHeader";
 import Padding from "../../components/Layouts/Padding";
@@ -11,15 +10,16 @@ import Calender from "../../components/FormElements/Calender";
 import MySelect from "../../components/FormElements/Select";
 import ManagerSwitcher from "../../components/ManagerSwitcher";
 import StatCard from "../../components/Cards/StatCard";
-import TeamTable from "../../components/Tables/celebrity/TeamTable";
-import CelebrityDetails from "../../components/Pages/Dashboard/CelebrityDetails";
-import PartyTable from "../../components/Tables/celebrity/PartyTable";
+import TeamTable from "../../components/Tables/media/TeamTable";
 import BtnOutlinedWithIcon from "../../components/Buttons/BtnOutlinedWithIcon";
+import EditBtn from "../../components/Buttons/EditBtn";
 import MediaDetails from "../../components/Pages/Dashboard/MediaDetails";
+import CampaignTable from "../../components/Tables/media/CampaignTable";
+import Filter from "../../components/Filter";
 
 const Dashboard = () => {
   const [open, setOpen] = useState(false);
-  const [activeTable, setActiveTable] = useState("Team");
+  const [activeTable, setActiveTable] = useState("Campaigns");
   const stats = [
     { title: "Campaigns", type: "number", value: "300" },
     { title: "Active Campaigns", type: "number", value: "314" },
@@ -52,18 +52,13 @@ const Dashboard = () => {
       </div>
       <BtnOutlinedWithIcon className="mr-[8px]" color="green" text="Copy Link" icon={<span className="icon-copy text-success-default text-[20px]"> </span>}></BtnOutlinedWithIcon>
       <BtnOutlinedWithIcon className="mr-auto" color="#110066" text="Share Link" icon={<span className="icon-copy text-black-default text-[20px]"> </span>}></BtnOutlinedWithIcon>
-        <Link
-          passHref
-          href='/media/edit'
-        >
-          <BtnOutlinedWithIcon text='Edit Celebrity' link='/media/edit' color='#110066' textcolor='black' icon={<span className="icon-plus-circle"> </span>} /> 
-          {/* <BtnIcon text={Button.text} link={Button.link} icon={<span className="icon-plus-circle"> </span>}></BtnIcon> */}
-        </Link>
+      <EditBtn text='Edit Celebrity' link='/media/edit' icon={<span className="icon-plus-circle"></span> } />
+        
     </header>
         <MediaDetails></MediaDetails>
-        <div className="flex flex-row justify-between">
-        <p className="subheader_heavy mb-[1.2rem]">Analytics</p>
-        <p className="subheader_heavy mb-[1.2rem]">Filter</p>
+        <div className="flex flex-row justify-between mb-[1.2rem]">
+        <p className="subheader_heavy ">Analytics</p>
+        <Filter />
         </div>
 
         <div className="flex flex-wrap gap-[24px] mb-[1.6rem] md:mb-[4.4rem] border-dashed border-b md:border-none pb-7 md:pb-2">
@@ -75,10 +70,10 @@ const Dashboard = () => {
           handleChange={(item) => {
             setActiveTable(item);
           }}
-          items={["Parties", "Team"]}
+          items={["Campaigns", "Team"]}
           className="!mb-[1rem]"
         ></ManagerSwitcher>
-        {activeTable == "Parties" && <PartyTable></PartyTable>}
+        {activeTable == "Campaigns" && <CampaignTable></CampaignTable>}
         {activeTable == "Team" && <TeamTable></TeamTable>}
       </div>
     </Padding>

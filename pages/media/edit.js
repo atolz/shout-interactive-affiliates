@@ -2,10 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import Padding from '../../components/Layouts/Padding';
 import BaseLayout from "../../components/Layouts/BaseLayout";
-import DisplayHeader from '../../components/Layouts/DisplayHeader'
 import { Stack } from '@mui/material';
 import TextField from "../../components/FormElements/TextField";
-import Calender from "../../components/FormElements/Calender";
 import MySelect from "../../components/FormElements/Select";
 import BtnPrimary from '../../components/Buttons/BtnPrimary';
 
@@ -20,17 +18,13 @@ const EditMedia = () => {
         </header>
         <div className="bg-white p-[5rem] rounded-2xl">
             <div className='mb-[4rem]'>
-            <p className="caption_heavy text-black-default flex mb-[8px]">Image</p>
-                <Image src='/images/addImg.png' alt='add' width='150px' height='150px' />
+            <p className="caption_heavy text-black-default flex mb-[8px]">Logo</p>
+                <Image src='/images/addImg.png' alt='add' width='150px' height='150px' className='cursor-pointer'/>
             </div>
             <Stack gap={"24px"}>
                 <div className='flex flex-row justify-between'>
-                    <div className='w-full'><TextField label="Name of Celebrity"></TextField></div>
-                    <div className='w-full'><MySelect label="Industry"></MySelect></div>                
-                </div>
-                <div className='flex flex-row justify-between'>
-                    <div className='w-full'><TextField label="Stage Name"></TextField></div>
-                    <div className='w-full'><MySelect label="Level of Celebrity"></MySelect></div>                
+                    <div className='w-full'><TextField label="Media House Name "></TextField></div>
+                    <div className='w-full'><MySelect label="Type of Media House"></MySelect></div>                
                 </div>
                <div className='w-full'>
                <label className="caption_heavy text-black-default flex mb-[8px]">Description</label>
@@ -39,6 +33,23 @@ const EditMedia = () => {
                    
                 ></input>
                </div>
+            </Stack>
+            <hr className='my-[5rem] w-[90%]' />
+            <Stack gap={"24px"}>
+                <div className='w-full'>
+                    <label className="caption_heavy text-black-default flex mb-[8px]">Address</label>
+                    <input
+                        className='flex h-[48px] mb-[10px]  min-w-[180px] w-[90%] text-black-default body_light focus:border-primary focus:outline-0 border-gray-light border rounded-[16px] px-[8px] py-[14px]'
+                    
+                    ></input>
+               </div>
+                <div className='flex flex-row justify-between'>
+                    <div className='w-full'><TextField label="City"></TextField></div>
+                    <div className='w-full'><MySelect label="State"></MySelect></div>         
+                </div>
+                <div className='flex flex-row justify-between'>
+                    <div className='w-full'><MySelect label="Country"></MySelect></div>         
+                </div>
             </Stack>
             <hr className='my-[5rem] w-[90%]' />
             <Stack gap={"24px"}>
@@ -55,7 +66,7 @@ const EditMedia = () => {
                     <div className='w-full'><TextField label="YouTube"></TextField></div>
                     <div className='w-full'><TextField label="Website"></TextField></div>
                 </div>
-                <div className='w-[50%]'>
+                <div className='w-[35%]'>
                     <BtnPrimary text='Update Changes' />
                 </div>
             </Stack>

@@ -1,9 +1,10 @@
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
-// import Link from "next/dist/client/link";
+// import Link from "next/link";
 
 const BtnOutlinedWithIcon = ({ text, icon, color, className, textcolor, }) => {
   return (
+    // <Link href={link} passHref>
     <Tooltip
       title={text}
       sx={{
@@ -13,7 +14,7 @@ const BtnOutlinedWithIcon = ({ text, icon, color, className, textcolor, }) => {
         },
       }}
     >
-      {/* <Link href={link} passHref> */}
+   
       <button
         style={{ borderColor: color }}
         className={`px-[10px] bg-white h-[32px] whitespace-nowrap ${color ? "border-success-default" : "border-gray-dark"}   rounded-xl border-[1.9px]  flex items-center justify-center ${className}`}
@@ -21,8 +22,9 @@ const BtnOutlinedWithIcon = ({ text, icon, color, className, textcolor, }) => {
         <span>{icon}</span>
         <span className={`caption_heavy ml-[8px]  ${textcolor ? "text-primary" : "text-gray-darker"}`}>{text}</span>
       </button>
-      {/* </Link> */}
     </Tooltip>
+    // </Link>
+
     // <Button
     //   disableElevation
     //   sx={{ Width: "113px", height: "32px", border: "1px solid #60646A", bgcolor: `transparent`, textTransform: "none", borderRadius: "8px" }}

@@ -21,7 +21,7 @@ const EditCelebrity = () => {
         <div className="bg-white p-[5rem] rounded-2xl">
             <div className='mb-[4rem]'>
             <p className="caption_heavy text-black-default flex mb-[8px]">Image</p>
-                <Image src='/images/addImg.png' alt='add' width='150px' height='150px' />
+                <Image src='/images/addImg.png' alt='add' width='150px' height='150px' className='cursor-pointer' />
             </div>
             <Stack gap={"24px"}>
                 <div className='flex flex-row justify-between'>
@@ -55,7 +55,7 @@ const EditCelebrity = () => {
                     <div className='w-full'><TextField label="YouTube"></TextField></div>
                     <div className='w-full'><TextField label="Website"></TextField></div>
                 </div>
-                <div className='w-[50%]'>
+                <div className='w-[35%]'>
                     <BtnPrimary text='Update Changes' />
                 </div>
             </Stack>

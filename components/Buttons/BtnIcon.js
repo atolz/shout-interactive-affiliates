@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const BtnIcon = ({ text, icon, link, color }) => {
   return (
-    <Link href={link}>
+    <Link href={link} passHref>
       <Button
         disableElevation
         sx={{

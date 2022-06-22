@@ -9,14 +9,12 @@ import Calender from "../../components/FormElements/Calender";
 import MySelect from "../../components/FormElements/Select";
 import ManagerSwitcher from "../../components/ManagerSwitcher";
 import StatCard from "../../components/Cards/StatCard";
-import BrandDetails from "../../components/Pages/Dashboard/BrandDetails";
-import CouponsTable from "../../components/Tables/CouponsTable";
-import ProductTable from "../../components/Tables/ProductTable";
-import BranchesTable from "../../components/Tables/BranchesTable";
 import TeamTable from "../../components/Tables/celebrity/TeamTable";
 import CelebrityDetails from "../../components/Pages/Dashboard/CelebrityDetails";
 import PartyTable from "../../components/Tables/celebrity/PartyTable";
 import BtnOutlinedWithIcon from "../../components/Buttons/BtnOutlinedWithIcon";
+import EditBtn from "../../components/Buttons/EditBtn";
+import Filter from "../../components/Filter";
 
 const Dashboard = () => {
   const [open, setOpen] = useState(false);
@@ -49,27 +47,20 @@ const Dashboard = () => {
         </ModalContainer>
       </Dialog>
       <div className="max-w-[1100px] mx-auto">
-        
-        {/* <DisplayHeader displayText={"David Adeleke"} action={toggle} subheaderText={""} Button={{ text: "Create Edible Shout Link", link: "/brand/dashboard" }} /> */}
-        <header className="flex flex-wrap justify-between mb-[27px] md:mb-[52px] items-center w-full">
+      <header className="flex flex-wrap justify-between mb-[27px] md:mb-[52px] items-center w-full">
       <div className="mr-5">
         <h2 className="display_3_heavy ">David Adeleke</h2>
         <p className="subheader_light mb-[30px] md:mb-0"></p>
       </div>
       <BtnOutlinedWithIcon className="mr-[8px]" color="green" text="Copy Link" icon={<span className="icon-copy text-success-default text-[20px]"> </span>}></BtnOutlinedWithIcon>
       <BtnOutlinedWithIcon className="mr-auto" color="#110066" text="Share Link" icon={<span className="icon-copy text-black-default text-[20px]"> </span>}></BtnOutlinedWithIcon>
-        <div
-          className="ml-auto"
-          onClick={'/celebrity/edit'}
-        >
-          <BtnOutlinedWithIcon text='Edit Celebrity' color='#110066' textcolor='black' icon={<span className="icon-plus-circle"> </span>} /> 
-          {/* <BtnIcon text={Button.text} link={Button.link} icon={<span className="icon-plus-circle"> </span>}></BtnIcon> */}
-        </div>
+      <EditBtn text='Edit Celebrity' link='/celebrity/edit' icon={<span className="icon-plus-circle"></span> } />
+      
     </header>
         <CelebrityDetails></CelebrityDetails>
-        <div className="flex flex-row justify-between">
-        <p className="subheader_heavy mb-[1.2rem]">Analytics</p>
-        <p className="subheader_heavy mb-[1.2rem]">Filter</p>
+        <div className="flex flex-row justify-between mb-[1.2rem]">
+        <p className="subheader_heavy ">Analytics</p>
+        <Filter />
         </div>
 
         <div className="flex flex-wrap gap-[24px] mb-[1.6rem] md:mb-[4.4rem] border-dashed border-b md:border-none pb-7 md:pb-2">
