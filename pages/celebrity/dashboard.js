@@ -14,6 +14,7 @@ import CelebrityDetails from "../../components/Pages/Dashboard/CelebrityDetails"
 import PartyTable from "../../components/Tables/celebrity/PartyTable";
 import BtnOutlinedWithIcon from "../../components/Buttons/BtnOutlinedWithIcon";
 import Filter from "../../components/Filter";
+import EditBtn from "../../components/Buttons/EditBtn";
 
 const Dashboard = () => {
   const [open, setOpen] = useState(false);
@@ -55,13 +56,8 @@ const Dashboard = () => {
       </div>
       <BtnOutlinedWithIcon className="mr-[8px]" color="green" text="Copy Link" icon={<span className="icon-copy text-success-default text-[20px]"> </span>}></BtnOutlinedWithIcon>
       <BtnOutlinedWithIcon className="mr-auto" color="#110066" text="Share Link" icon={<span className="icon-copy text-black-default text-[20px]"> </span>}></BtnOutlinedWithIcon>
-        <div
-          className="ml-auto"
-          onClick={'/celebrity/edit'}
-        >
-          <BtnOutlinedWithIcon text='Edit Celebrity' color='#110066' textcolor='black' icon={<span className="icon-plus-circle"> </span>} /> 
-          {/* <BtnIcon text={Button.text} link={Button.link} icon={<span className="icon-plus-circle"> </span>}></BtnIcon> */}
-        </div>
+      <EditBtn text='Edit Celebrity' link='/media/edit' icon={<span className="icon-plus-circle"></span> } />
+      
     </header>
         <CelebrityDetails></CelebrityDetails>
         <div className="flex flex-row justify-between mb-[1.2rem]">
