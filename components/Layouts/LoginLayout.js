@@ -4,11 +4,11 @@ import React from 'react';
 const LoginLayout = ({children}) => {
   return (
     <div className='h-[auto]'>
-      <div className=' p-[10rem] bg-primary min-h-[120vh] items-center flex flex-col'>
+      <div className="p-[10rem] bg-[url('/images/loginbg.svg')] bg-center min-h-[120vh] items-center flex flex-col">
       <Image src='/images/shoutlogo.png' alt='playstore' width='150px' height='100px' />
         {children}
       </div>
-      <div className='bg-black h-[15vh]'>
+      <div className='bg-primary h-[15vh]'>
         <div className='flex flex-row justify-between w-[50%] align-middle text-center m-[auto] py-[2rem]'>
           <div className='flex flex-row  text-center align-middle'>
             <p className='mr-10 text-white title_heavy'>Need Support?</p>
