@@ -37,7 +37,9 @@ module.exports = {
         "error-default": "#F03738",
 
         //light blue
-        'light-blue': 'rgba(0, 127, 197, 1)'
+        'light-blue': 'rgba(0, 127, 197, 1)',
+
+        'faint-bg': '#F8F9F9',
       },
     },
     screens: {
