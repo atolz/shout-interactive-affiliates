@@ -4,7 +4,7 @@ import Link from "next/link";
 const BtnPrimary = ({ text, loading, handleClick, link = "" }) => {
   return (
     <div className="w-full">
-      <Link href={link}>
+      <Link href={link} passHref>
         <LoadingButton
           disableElevation
           sx={{
