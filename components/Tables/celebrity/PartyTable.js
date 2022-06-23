@@ -5,7 +5,9 @@ import { Dialog, Stack } from "@mui/material";
 import TextField from "../../../components/FormElements/TextField";
 import ModalContainer from "../../../components/ModalContainer";
 import MySelect from "../../../components/FormElements/Select";
-import BtnIcon from "../../Buttons/BtnIcon";
+import LabelOutLinedBtn from "../../Buttons/LabelBtn";
+import LabelTag from "../../LabelTag";
+import BtnOutlined from "../../Buttons/BtnOutlined";
 
 
 const PartyTable = () => {
@@ -67,10 +69,14 @@ const PartyTable = () => {
 
               <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">30th Birthday</td>
               <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">10%</td>
-              <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">Live</td>
+              <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">
+                <LabelTag text={"Live"}></LabelTag>
+              </td>
               <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">21st May 2022</td>
-              <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">Join Party</td>
-            </tr>
+              <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">
+              <LabelOutLinedBtn text='Join Party' />
+              </td>
+              </tr>
             <tr>
               <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">
                 <p className="mt-[14px]">Justin Hoffman</p>
@@ -78,11 +84,17 @@ const PartyTable = () => {
 
               <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">30th Birthday</td>
               <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">10%</td>
-              <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">Live</td>
+              <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">
+                <LabelTag text={"Live"}></LabelTag>
+              </td>
               <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">21st May 2022</td>
-              <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">Join Party</td>
+              <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">
+              <LabelOutLinedBtn text='Join Party' />
+              </td>
+
             </tr>
           </tbody>
+          
         </table>
       </div>
       <div className="mt-[28px] flex justify-between items-center px-[20px] caption_light flex-wrap">

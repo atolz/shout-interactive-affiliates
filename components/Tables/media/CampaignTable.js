@@ -6,6 +6,8 @@ import TextField from "../../FormElements/TextField";
 import ModalContainer from "../../ModalContainer";
 import MySelect from "../../FormElements/Select";
 import BtnIcon from "../../Buttons/BtnIcon";
+import LabelTag from "../../LabelTag";
+import LabelOutLinedBtn from "../../Buttons/LabelBtn";
 
 
 const CampaignTable = () => {
@@ -40,19 +42,20 @@ const CampaignTable = () => {
           <thead className="text-bl text-black-light whitespace-nowrap bg-gray-lightest-2 caption_heavy h-[48px] font-medium">
             <tr>
               <th className="border-b border-r border-gray-lighter font-medium text-left pt-[10px] px-[16px] ">
-                <span className=" align-text-bottom mt-auto">Celebrant Name</span>
+                <span className=" align-text-bottom mt-auto">Name of Campaign</span>
               </th>
-              <th className="border-b border-r border-gray-lighter font-medium text-left pt-[10px] px-[16px]">
-                <span className=" align-text-bottom mt-auto">Title of Party </span>
-              </th>
+              
               <th className="border-b border-r border-gray-lighter font-medium text-left pt-[10px] px-[16px]">
                 <span className=" align-text-bottom mt-auto">Reach</span>
+              </th>
+              <th className="border-b border-r border-gray-lighter font-medium text-left pt-[10px] px-[16px]">
+                <span className=" align-text-bottom mt-auto">Conversions </span>
               </th>
               <th className="border-b border-r border-gray-lighter font-medium text-left pt-[10px] px-[16px]">
                 <span className=" align-text-bottom mt-auto">Status </span>
               </th>
               <th className="border-b border-r border-gray-lighter font-medium text-left pt-[10px] px-[16px]">
-                <span className=" align-text-bottom mt-auto">Date</span>
+                <span className=" align-text-bottom mt-auto">Duration</span>
               </th>
               <th className="border-b border-r border-gray-lighter font-medium text-left pt-[10px] px-[16px]">
                 <span className=" align-text-bottom mt-auto">Action</span>
@@ -62,27 +65,34 @@ const CampaignTable = () => {
           <tbody className="body_light text-black-default whitespace-nowrap h-[52px]">
             <tr>
               <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">
-                <p className="mt-[14px]">Justin Hoffman</p>
+                <p className="mt-[14px]">Make Noise</p>
               </td>
-
-              <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">30th Birthday</td>
-              <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">10%</td>
-              <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">Live</td>
-              <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">21st May 2022</td>
-              <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">Join Party</td>
+              <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">200</td>
+              <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">100</td>
+              <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">
+                <LabelTag text={"Active"}></LabelTag>
+              </td>
+              <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">21st May-21 June 2022</td>
+              <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">
+              <LabelOutLinedBtn text='View' />
+              </td>
             </tr>
             <tr>
               <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">
-                <p className="mt-[14px]">Justin Hoffman</p>
+                <p className="mt-[14px]">Spring Break Fest</p>
               </td>
-
-              <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">30th Birthday</td>
-              <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">10%</td>
-              <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">Live</td>
-              <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">21st May 2022</td>
-              <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">Join Party</td>
+              <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">56</td>
+              <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">32</td>
+              <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">
+                <LabelTag text={"Pending"} color='rgba(219, 145, 2, 1)' bg='rgba(248, 248, 247, 1)'></LabelTag>
+              </td>
+              <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">21st May-21 June 2022</td>
+              <td className="border-b border-r border-gray-lighter px-[16px] text-left align-text-bottom">
+              <LabelOutLinedBtn text='View' />
+              </td>
             </tr>
           </tbody>
+          
         </table>
       </div>
       <div className="mt-[28px] flex justify-between items-center px-[20px] caption_light flex-wrap">

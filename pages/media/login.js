@@ -20,9 +20,8 @@ const Login = () => {
                     <div className='w-full'><TextField label="Password"></TextField></div>
                 </div>
                 <p className="text-light-blue my-[20px] md:mb-0">Change Password</p>
-                <div className='w-[90%]'>
-                    <BtnPrimary text='Log In' link='/media/dashboard' />
-                </div>
+                <BtnPrimary text='Log In' link='/media/dashboard' />
+               
             </Stack>
         </div>
     </LoginLayout>
