@@ -10,9 +10,9 @@ const MediaDetails = () => {
       <div className="flex flex-wrap items-center mb-[2rem]">
         <img className="w-[13.8rem] h-[13.8rem]" src="/images/media.png"></img>
         <div className="ml-[3rem]">
-          <h2 className="display_3_heavy !mb-[1.2rem] block">David Adeleke</h2>
-          <p className="subheader_light text-black-light max-w-[313px]">@Davido</p>
-          <p className="subheader_light text-black-light max-w-[313px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis mauris eros nunc</p>
+          <h2 className="display_3_heavy !mb-[1.2rem] block">MTV Base</h2>
+          {/* <p className="subheader_light text-black-light max-w-[313px]">@Davido</p> */}
+          <p className="subheader_light text-black-light max-w-[313px]">Parkview Estate, 10B Prof Bello Osagie Street, Ikoyi 106104, Lagos</p>
           <div className="mt-[2rem] flex justify-between w-[65%]">
             <Image  src='/images/notify.png' alt='social' width='20px' height='20px' />
             <Image  src='/images/youtube.png' alt='social' width='20px' height='20px' />
@@ -28,7 +28,7 @@ const MediaDetails = () => {
           </div>
           <div className=" border-gray-light border-x px-[5.4rem] h-[11.1rem] grid place-items-center place-content-center">
             <h4 className="caption_light mb-[1.2rem] text-gray-dark">Contract Month Left</h4>
-            <p className="title_heavy text-black-default">A-List</p>
+            <p className="title_heavy text-black-default">3 Months</p>
           </div>
         </div>
       </div>

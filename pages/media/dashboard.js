@@ -52,13 +52,13 @@ const Dashboard = () => {
       </div>
       <BtnOutlinedWithIcon className="mr-[8px]" color="green" text="Copy Link" icon={<span className="icon-copy text-success-default text-[20px]"> </span>}></BtnOutlinedWithIcon>
       <BtnOutlinedWithIcon className="mr-auto" color="#110066" text="Share Link" icon={<span className="icon-copy text-black-default text-[20px]"> </span>}></BtnOutlinedWithIcon>
-      <EditBtn text='Edit Celebrity' link='/media/edit' icon={<span className="icon-plus-circle"></span> } />
+      <EditBtn text='Edit Media House' link='/media/edit' icon={<span className="icon-plus-circle"></span> } />
         
     </header>
         <MediaDetails></MediaDetails>
         <div className="flex flex-row justify-between mb-[1.2rem]">
         <p className="subheader_heavy ">Analytics</p>
-        <Filter />
+        <Filter className='right-[14rem] top-[48rem] !z-30' />
         </div>
 
         <div className="flex flex-wrap gap-[24px] mb-[1.6rem] md:mb-[4.4rem] border-dashed border-b md:border-none pb-7 md:pb-2">

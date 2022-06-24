@@ -2,17 +2,17 @@ import React, {useState} from 'react';
 import Image from 'next/image'
 import Calender from './FormElements/Calender';
 
-const Filter = () => {
+const Filter = ({className}) => {
   const [first, setFirst] = useState(false);
   return (
     <>
-    <div className='flex flex-row w-[200px] relative border-2 border-gray-light rounded-xl justify-between bg-white px-[20px] py-[10px]'
+    <div className='flex flex-row w-[200px]  border-2 border-gray-light rounded-xl justify-between bg-white px-[20px] py-[10px]'
       onClick={()=>setFirst(!first)}
     >
         <p className='body_light'>Filter</p>
         <Image src='/images/filter.png' alt='' width='20px' height='20px' />
     </div>
-    {first && <div className='bg-white rounded-xl md:w-[200px] md:h-[450px] absolute right-[0.5rem]'>
+    {first && <div className={`${className}bg-white rounded-xl md:w-[200px] md:h-[450px] z-10 absolute right-[8rem] top-[48rem] `}>
       <div className='bg-white p-[3rem] rounded-xl'>
         <p className='title_heavy text-black'>Filter</p>
         <p className='body_light text-primary mt-4'>Period</p>

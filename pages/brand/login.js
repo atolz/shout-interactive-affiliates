@@ -1,8 +1,10 @@
 import React from 'react';
+import Image from 'next/image';
 import { Stack } from '@mui/material';
 import TextField from "../../components/FormElements/TextField";
 import LoginLayout from '../../components/Layouts/LoginLayout';
 import BtnPrimary from '../../components/Buttons/BtnPrimary';
+import InputField from '../../components/FormElements/InputField';
 
 const Login = () => {
   return (
@@ -17,7 +19,9 @@ const Login = () => {
                     <div className='w-full'><TextField label="Username"></TextField></div>
                 </div>
                 <div className='flex flex-row justify-between'>
-                    <div className='w-full'><TextField label="Password"></TextField></div>
+                    <div className='w-full'><InputField label="Password">
+                    <Image src='/images/openedeyes.svg'  alt='icon' width='20px' height='20px' />
+                        </InputField></div>
                 </div>
                 <p className="text-light-blue my-[20px] md:mb-0">Change Password</p>
                 <BtnPrimary text='Log In' link='/brand/dashboard' />

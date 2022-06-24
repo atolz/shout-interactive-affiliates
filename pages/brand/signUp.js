@@ -1,8 +1,10 @@
 import React from 'react';
 import { Stack } from '@mui/material';
+import Image from 'next/image';
 import TextField from "../../components/FormElements/TextField";
 import LoginLayout from '../../components/Layouts/LoginLayout';
 import BtnPrimary from '../../components/Buttons/BtnPrimary';
+import InputField from '../../components/FormElements/InputField';
 
 const SignUp = () => {
   return (
@@ -22,16 +24,18 @@ const SignUp = () => {
                     <TextField  label="Last name"></TextField>
                 </div>
              
-                    <TextField className='!max-w-[500px] !min-w-[180px] 'label="Role"></TextField>
+                <TextField className='!max-w-[500px] !min-w-[180px] 'label="Role"></TextField>
                
-                    <TextField className='!max-w-[500px] !min-w-[180px] ' label="Create Username"></TextField>
-                
-                    <TextField className='!max-w-[500px] !min-w-[180px] ' label="Password"></TextField>
-                
-                    <TextField className='!max-w-[500px] !min-w-[180px] ' label="Confirm Password"></TextField>
+               <TextField className='!max-w-[500px] !min-w-[180px] ' label="Create Username"></TextField>
                
-                {/* <p className="text-light-blue my-[20px] md:mb-0">Change Password</p> */}
-                <BtnPrimary text='Create' link='/brand/login' />
+               <InputField className='!max-w-[500px] !min-w-[180px] ' label="Password">
+               <Image src='/images/openedeyes.svg'  alt='icon' width='20px' height='20px' />
+               </InputField>
+
+              <InputField className='!max-w-[500px] !min-w-[180px] ' label="Confirm Password">
+               <Image src='/images/openedeyes.svg'  alt='icon' width='20px' height='20px' />
+               </InputField>
+               <BtnPrimary text='Create' link='/brand/login' />
                
             </Stack>
         </div>
