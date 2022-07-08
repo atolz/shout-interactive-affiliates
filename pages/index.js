@@ -8,7 +8,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 export default function Home() {
   const router = useRouter();
   useEffect(() => {
-    router.push("/auth/login");
+    router.push("/brand");
   });
   return (
     <div className={styles.container}>

@@ -41,7 +41,7 @@ const TeamTable = () => {
           className="ml-auto"
           onClick={toggle}
         >
-        <BtnIcon text='Add Team'  link="/celebrity/dashboard" icon={<span className="icon-plus-circle"> </span>}></BtnIcon>
+        <BtnIcon text='Add Team'  link="/media/dashboard" icon={<span className="icon-plus-circle"> </span>}></BtnIcon>
       </div></div>
       <div className="w-[100%] overflow-x-scroll scroll_hide">
         <table className=" w-full border-l border-gray-lighter border-collapse">
