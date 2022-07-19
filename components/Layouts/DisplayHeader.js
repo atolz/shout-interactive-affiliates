@@ -2,6 +2,8 @@ import BtnIcon from "../Buttons/BtnIcon";
 import BtnOutlinedWithIcon from "../Buttons/BtnOutlinedWithIcon";
 
 const DisplayHeader = ({ Button = "", displayText, subheaderText, action = "" }) => {
+
+
   return (
     <header className="flex flex-wrap justify-between mb-[27px] md:mb-[52px] items-center w-full">
       <div className="mr-5">

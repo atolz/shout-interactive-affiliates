@@ -14,23 +14,24 @@ const SignUp = () => {
                 <h2 className="display_3_heavy ">Welcome MTV Base</h2>
                 <p className="subheader_light mb-[30px] md:mb-0">Setup your account to start using shout</p>
             </div>
+            
             <Stack gap={"24px"}>
                 <div className='flex flex-col md:flex-row justify-between'>
-                    <TextField label="First name"></TextField>
-                    <TextField label="Last name"></TextField>
+                    <TextField label="First name" placeholder="First name"></TextField>
+                    <TextField label="Last name" placeholder="last name"></TextField>
                 </div>
              
-                    <TextField label="Role"></TextField>
+                <TextField status='error' label="Role" placeholder="Enter Role"></TextField>
                
-                    <TextField label="Create Username"></TextField>
-                
+               <TextField  label="Create Username" placeholder="eg. joe_234"></TextField>
+               
+               <InputField  label="Password" placeholder="**********">
+               <Image src='/images/openedeyes.svg'  alt='icon' width='20px' height='20px' />
+               </InputField>
 
-                    <InputField label="Password">
-                        <Image src='/images/openedeyes.svg'  alt='icon' width='20px' height='20px' />
-                    </InputField>
-                    <InputField label="Confirm Password">
-                        <Image src='/images/openedeyes.svg'  alt='icon' width='20px' height='20px' />
-                    </InputField>
+              <InputField  label="Confirm Password" placeholder="**********">
+               <Image src='/images/openedeyes.svg'  alt='icon' width='20px' height='20px' />
+               </InputField>
                 <BtnPrimary text='Create' link='/media/login' />
                
             </Stack>

@@ -62,7 +62,7 @@ const Dashboard = () => {
         <CelebrityDetails></CelebrityDetails>
         <div className="flex flex-row justify-between mb-[1.2rem]">
         <p className="subheader_heavy ">Analytics</p>
-        <Filter  className='right-[13.4rem] top-[50rem] !z-30' />
+        <Filter   />
         </div>
 
         <div className="flex flex-wrap gap-[24px] mb-[1.6rem] md:mb-[4.4rem] border-dashed border-b md:border-none pb-7 md:pb-2">

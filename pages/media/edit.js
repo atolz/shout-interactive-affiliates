@@ -1,4 +1,5 @@
-import React from 'react';
+import React,{useState} from 'react';
+import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Link from 'next/link';
 import Padding from '../../components/Layouts/Padding';
@@ -9,6 +10,14 @@ import MySelect from "../../components/FormElements/Select";
 import BtnPrimary from '../../components/Buttons/BtnPrimary';
 
 const EditMedia = () => {
+    const [loading, setLoading]=useState();
+    const router = useRouter();
+    function handleSubmit(){
+        setLoading(true);
+        setTimeout(() => {
+            router.push('/media/dashboard')
+        }, 1500);
+    }
   return (
     <Padding className="bg-gray-lighter !pb-[10rem] !px-[15rem] ">
        <header className="flex flex-wrap justify-between mb-[27px] md:mb-[52px]  items-center w-full">
@@ -51,32 +60,30 @@ const EditMedia = () => {
                     ></input>
                </div>
                 <div className='flex justify-between flex-col md:flex-row'>
-                    <div className='w-full'><TextField className='!max-w-[400px] !min-w-[180px]' label="City"></TextField></div>
-                    {/* <div className='w-full'><TextField className='!max-w-[500px] !min-w-[180px]' label="State"></TextField></div> */}
+                    <div className='w-full'><TextField className='!max-w-[400px] !min-w-[180px]' label="City" placeholder='eg. Lagos'></TextField></div>
                     <div className='w-full'><MySelect label="State"></MySelect></div>         
                 </div>
                 <div className='flex flex-row justify-between'>
                     <div className='w-full'><MySelect label="Country"></MySelect></div>         
-                    {/* <div className='w-full'><TextField className='!max-w-[500px] !min-w-[180px]' label="Country"></TextField></div> */}
                 </div>
             </Stack>
             <hr className='my-[5rem] w-[90%]' />
             <Stack gap={"24px"}>
                 <p className="caption_heavy text-black-default flex mb-[8px]">Social Media Handles</p>
                 <div className='flex flex-col md:flex-row justify-between'>
-                    <div className='w-full'><TextField className='!max-w-[400px] !min-w-[180px]' label="Twitter"></TextField></div>
-                    <div className='w-full'><TextField className='!max-w-[400px] !min-w-[180px]' label="Facebook"></TextField></div>
+                    <div className='w-full'><TextField className='!max-w-[400px] !min-w-[180px]' label="Twitter" placeholder=''></TextField></div>
+                    <div className='w-full'><TextField className='!max-w-[400px] !min-w-[180px]' label="Facebook" placeholder=''></TextField></div>
                 </div>
                 <div className='flex flex-col md:flex-row justify-between'>
-                    <div className='w-full'><TextField className='!max-w-[400px] !min-w-[180px]' label="Snapchat"></TextField></div>
-                    <div className='w-full'><TextField className='!max-w-[400px] !min-w-[180px]' label="Instagram"></TextField></div>
+                    <div className='w-full'><TextField className='!max-w-[400px] !min-w-[180px]' label="Snapchat" placeholder=''></TextField></div>
+                    <div className='w-full'><TextField className='!max-w-[400px] !min-w-[180px]' label="Instagram" placeholder=''></TextField></div>
                 </div>
                 <div className='flex flex-col md:flex-row justify-between'>
-                    <div className='w-full'><TextField className='!max-w-[400px] !min-w-[180px]' label="YouTube"></TextField></div>
-                    <div className='w-full'><TextField className='!max-w-[400px] !min-w-[180px]' label="Website"></TextField></div>
+                    <div className='w-full'><TextField className='!max-w-[400px] !min-w-[180px]' label="YouTube" placeholder=''></TextField></div>
+                    <div className='w-full'><TextField className='!max-w-[400px] !min-w-[180px]' label="Website" placeholder=''></TextField></div>
                 </div>
                 <div className='md:w-[42%]'>
-                    <BtnPrimary text='Update Changes' />
+                    <BtnPrimary loading={loading} text='Update Changes' handleClick={handleSubmit} />
                 </div>
             </Stack>
         </div>

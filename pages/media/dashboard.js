@@ -16,6 +16,7 @@ import EditBtn from "../../components/Buttons/EditBtn";
 import MediaDetails from "../../components/Pages/Dashboard/MediaDetails";
 import CampaignTable from "../../components/Tables/media/CampaignTable";
 import Filter from "../../components/Filter";
+import MediaFilter from "../../components/filter/MediaFilter";
 
 const Dashboard = () => {
   const [open, setOpen] = useState(false);
@@ -58,7 +59,8 @@ const Dashboard = () => {
         <MediaDetails></MediaDetails>
         <div className="flex flex-row justify-between mb-[1.2rem]">
         <p className="subheader_heavy ">Analytics</p>
-        <Filter className='right-[14rem] top-[48rem] !z-30' />
+        <Filter />
+        {/* <MediaFilter /> */}
         </div>
 
         <div className="flex flex-wrap gap-[24px] mb-[1.6rem] md:mb-[4.4rem] border-dashed border-b md:border-none pb-7 md:pb-2">

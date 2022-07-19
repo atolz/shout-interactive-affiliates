@@ -51,7 +51,7 @@ const MySelect = ({ handleChange, label }) => {
       <label className="caption_heavy text-black-default flex mb-[8px]">{label}</label>
 
       <Select sx={selectStyle} id="demo-simple-select" value={10} onChange={handleChange}>
-        <MenuItem value={10}>Ten</MenuItem>
+        <MenuItem value={10}></MenuItem>
         <MenuItem value={20}>Twenty</MenuItem>
         <MenuItem value={30}>Thirty</MenuItem>
       </Select>
