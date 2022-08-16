@@ -7,6 +7,7 @@ import TextField from "../../components/FormElements/TextField";
 import ModalContainer from "../../components/ModalContainer";
 import Calender from "../../components/FormElements/Calender";
 import MySelect from "../../components/FormElements/Select";
+import BtnPrimary from "../Buttons/BtnPrimary";
 
 
 const BranchesTable = () => {
@@ -19,13 +20,27 @@ const BranchesTable = () => {
   return (
     <div className=" bg-white p-[2.4rem] rounded-[1.2rem]">
       <Dialog onClose={toggle} open={open}>
-        <ModalContainer actionText="Add" onClose={toggle} headerText="Add Branch" icon={<span className="icon-plus-circle text-[15px] font-bold"></span>}>
-          <Stack gap={"24px"} className=" flex-col">
-            <TextField label="Name"></TextField>
-            <TextField label="Branch"></TextField>
+        {/* <ModalContainer actionText="Add" onClose={toggle} headerText="Add Branch" icon={<span className="icon-plus-circle text-[15px] font-bold"></span>}> */}
+        <div className="px-[24px] py-[32px] rounded-[8px] md:w-[600px] w-full">
+          <div className="flex items-center mb-[60px]">
+            <span className="rou rounded-full w-[28px] h-[28px] bg-primary-lightest-2 flex justify-center items-center">
+            <span className="icon-plus-circle text-[15px] font-bold"></span>
+            </span>
+            <p className="title_heavy text-black-default ml-[12.5px]">Add Branch</p>
+            <span onClick={toggle} className="icon-close text-[11px] text-gray-dark ml-[auto] cursor-pointer"></span>
+          </div>
+          
+          <Stack gap={"16px"} className="w-full justify-between flex flex-row">
+            <div className="w-full"><TextField label="Name" placeholder="Branch Name"></TextField></div>
+            <div className="w-full"><TextField label="Location" placeholder="Branch Location"></TextField></div>
           </Stack>
           <p className="body_light text-black-default">+ Add another</p>
-        </ModalContainer>
+          <div className="w-[40%] items-end ml-[auto] mt-[4rem]" >
+           <BtnPrimary link="" text="Add"></BtnPrimary>
+         </div>
+        {/* </ModalContainer> */}
+
+        </div>
       </Dialog>
       <div className="flex justify-between">
       <div className="w-full max-w-[362px]"><input

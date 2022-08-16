@@ -29,6 +29,9 @@ const Login = () => {
                 <div className='flex flex-row justify-between'>
                     <div className='w-full'><TextField label="Username" placeholder='@joe_234'></TextField></div>
                 </div>
+                {/* <InputField  label="Create Username" placeholder="eg. joe_234">
+               <Image src='/images/times-circle.svg'  alt='icon' width='20px' height='20px' />
+               </InputField> */}
                 <div className='flex flex-row justify-between'>
                     <div className='w-full'><InputField label="Password" placeholder='******************'>
                     <Image src='/images/openedeyes.svg'  alt='icon' width='20px' height='20px' />

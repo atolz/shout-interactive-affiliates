@@ -8,6 +8,7 @@ import MySelect from "../../../components/FormElements/Select";
 import BtnIcon from "../../Buttons/BtnIcon";
 import BtnOutlined from "../../Buttons/BtnOutlined";
 import BtnOutlinedWithIcon from "../../Buttons/BtnOutlinedWithIcon";
+import BtnPrimary from "../../Buttons/BtnPrimary";
 
 
 const TeamTable = () => {
@@ -20,17 +21,24 @@ const TeamTable = () => {
   return (
     <div className=" bg-white p-[2.4rem] rounded-[1.2rem]">
       <Dialog onClose={toggle} open={open}>
-        <ModalContainer actionText="Add Users" onClose={toggle} headerText="Add Team" icon={<span className="icon-plus-circle text-[15px] font-bold"></span>}>
-          <Stack gap={"16px"}>
-            <div className="w-full flex flex-row justify-between">
-                <TextField label="First name"></TextField>
-                <TextField label="Last name"></TextField>
-            </div>
-            <TextField label="Email"></TextField>
-            <MySelect label="Role"></MySelect>
-            <MySelect label="Branch"></MySelect>
-          </Stack>
-        </ModalContainer>
+       <div className="px-[24px] py-[32px] rounded-[8px] md:w-[420px] w-full">
+          <div className="flex items-center mb-[20px]">
+            <p className="title_heavy text-black-default ">Add Team</p>
+            <span onClick={toggle} className="icon-close text-[11px] text-gray-dark ml-[auto] cursor-pointer"></span>
+          </div>
+            <Stack gap={"16px"}>
+              <div className="w-full flex flex-row justify-between">
+                  <TextField label="First name" placeholder="First Name"></TextField>
+                  <TextField label="Last name" placeholder="Last Name"></TextField>
+              </div>
+              <TextField label="Email" placeholder="info@keystonebank@gmail.com"></TextField>
+              <MySelect label="Role"></MySelect>
+              {/* <MySelect label="Branch"></MySelect> */}
+            </Stack>
+            <div className="w-[100%] items-end ml-[auto] mt-[4rem]" >
+           <BtnPrimary link="" text="Add Users"></BtnPrimary>
+         </div>
+          </div>
       </Dialog>
       <div className="flex justify-between">
       <div className="w-full max-w-[362px]"><input

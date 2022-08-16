@@ -39,7 +39,7 @@ const Filter = ({className}) => {
           <label className='caption_light text-primary ml-4'>Choose Date</label>
         </div>
       </div>
-      <div className='p-[3rem]'>
+      <div className='p-[2rem] px-[1.8rem]'>
         <Calender label="Date"></Calender>
       </div>
       </div>}

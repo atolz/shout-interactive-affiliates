@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Stack } from '@mui/material';
 import Image from 'next/image';
 import TextField from "../../components/FormElements/TextField";
@@ -7,6 +7,7 @@ import BtnPrimary from '../../components/Buttons/BtnPrimary';
 import InputField from '../../components/FormElements/InputField';
 
 const SignUp = () => {
+  const [showCheck, setShowCheck] =useState(false)
   return (
     <LoginLayout>
          <div className='bg-white rounded-xl p-[4rem] min-h-[400px] max-w-[500px] m-[auto] align-middle '>
@@ -26,8 +27,13 @@ const SignUp = () => {
              
                 <TextField status='error' label="Role" placeholder="Enter Role"></TextField>
                
-               <TextField  label="Create Username" placeholder="eg. joe_234"></TextField>
+               {/* <TextField  label="Create Username" placeholder="eg. joe_234"></TextField> */}
                
+               <InputField  label="Create Username" placeholder="eg. joe_234">
+               <img src='/images/check-circle.svg'  alt='icon' width='20px' height='20px' hidden={showCheck} onClick={()=>setShowCheck(!showCheck)} />
+               <img src='/images/times-circle.svg'  alt='icon' width='20px' height='20px' hidden={!showCheck} onClick={()=>setShowCheck(!showCheck)} />
+               </InputField>
+
                <InputField  label="Password" placeholder="**********">
                <Image src='/images/openedeyes.svg'  alt='icon' width='20px' height='20px' />
                </InputField>

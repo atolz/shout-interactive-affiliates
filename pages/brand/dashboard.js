@@ -41,8 +41,10 @@ const Dashboard = () => {
           </Stack>
         </ModalContainer>
       </Dialog>
+
+
       <div className="max-w-[1100px] mx-auto">
-        <DisplayHeader displayText={"Welcome"} action={toggle} subheaderText={""} Button={{ text: "Create Edible Shout Link", link: "/brand/dashboard" }} />
+        <DisplayHeader displayText={"Welcome"} action={toggle} subheaderText={""}  />
         {/* <DisplayHeader displayText={"Welcome"} action={toggle} subheaderText={""} /> */}
         {/* Dashboard */}
         <BrandDetails></BrandDetails>
