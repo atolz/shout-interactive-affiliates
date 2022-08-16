@@ -30,7 +30,7 @@ const BranchesTable = () => {
             <span onClick={toggle} className="icon-close text-[11px] text-gray-dark ml-[auto] cursor-pointer"></span>
           </div>
           
-          <Stack gap={"16px"} className="w-full justify-between flex flex-col !md:flex-row">
+          <Stack gap={"16px"} className="w-full justify-between flex flex-row !md:flex-row">
             <div className="w-full"><TextField label="Name" placeholder="Branch Name"></TextField></div>
             <div className="w-full"><TextField label="Location" placeholder="Branch Location"></TextField></div>
           </Stack>

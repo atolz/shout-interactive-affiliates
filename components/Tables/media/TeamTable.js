@@ -27,7 +27,7 @@ const TeamTable = () => {
             <span onClick={toggle} className="icon-close text-[11px] text-gray-dark ml-[auto] cursor-pointer"></span>
           </div>
             <Stack gap={"16px"}>
-              <div className="w-full flex flex-row justify-between">
+              <div className="w-full flex flex-row gap-[12px] justify-between">
                   <TextField label="First name" placeholder="First Name"></TextField>
                   <TextField label="Last name" placeholder="Last Name"></TextField>
               </div>
