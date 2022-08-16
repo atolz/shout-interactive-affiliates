@@ -33,7 +33,7 @@ const TeamTable = () => {
                   <TextField label="First name" placeholder="First Name"></TextField>
                   <TextField label="Last name" placeholder="Last Name"></TextField>
               </div>
-              <TextField label="Email"></TextField>
+              <TextField label="Email" placeholder="info@keystonebank@gmail.com"></TextField>
               <MySelect label="Role"></MySelect>
               <MySelect label="Branch"></MySelect>
             </Stack>
