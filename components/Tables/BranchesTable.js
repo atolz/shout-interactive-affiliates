@@ -30,12 +30,12 @@ const BranchesTable = () => {
             <span onClick={toggle} className="icon-close text-[11px] text-gray-dark ml-[auto] cursor-pointer"></span>
           </div>
           
-          <Stack gap={"16px"} className="w-full justify-between flex flex-row">
+          <Stack gap={"16px"} className="w-full justify-between flex flex-col !md:flex-row">
             <div className="w-full"><TextField label="Name" placeholder="Branch Name"></TextField></div>
             <div className="w-full"><TextField label="Location" placeholder="Branch Location"></TextField></div>
           </Stack>
           <p className="body_light text-black-default">+ Add another</p>
-          <div className="w-[40%] items-end ml-[auto] mt-[4rem]" >
+          <div className="md:w-[40%]  items-end ml-[auto] mt-[4rem]" >
            <BtnPrimary link="" text="Add"></BtnPrimary>
          </div>
         {/* </ModalContainer> */}
